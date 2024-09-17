@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtInserirNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do Aluno"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edInserirNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/txtInserirArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Área de Escolha"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layoutHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edInserirArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnInserir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_weight="1"
+                android:text="Inserir" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewTarefas"
+            android:layout_width="match_parent"
+            android:layout_height="438dp"
+            android:layout_weight="0" />
+
+        <TextView
+            android:id="@+id/txtTotalAlunos"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:shadowColor="#1ECAE0"
+            android:text="0\nAlunos"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnZerar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="100sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="1"
+            android:text="Zerar"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
