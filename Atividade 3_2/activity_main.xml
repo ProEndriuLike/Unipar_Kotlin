@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#454545"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#C83737"
+            android:gravity="center"
+            android:text="ChurrasPar"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2sp"
+                android:layout_marginRight="2sp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15sp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtHomens"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Homens"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edHomens"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:layout_marginBottom="4sp"
+                        android:background="@drawable/custom_background"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:textAlignment="center"
+                        android:textColor="#454545"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCriancas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Crianças"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edCriancas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:layout_marginBottom="4sp"
+                        android:background="@drawable/custom_background"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:textAlignment="center"
+                        android:textColor="#454545"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15sp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtMulheres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mulheres"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edMulheres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:layout_marginBottom="4sp"
+                        android:background="@drawable/custom_background"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:lineSpacingExtra="8sp"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:textAlignment="center"
+                        android:textColor="#454545"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnCalcular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="22sp"
+                        android:text="Calcular" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="10sp"
+                android:text="Resultado"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtContadorResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0sp"
+                android:layout_marginRight="0sp"
+                android:background="#FFFFFF"
+                android:text="Realizamos o cálculo para\n0 participantes"
+                android:textAlignment="center"
+                android:textColor="#009688"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtComida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="5sp"
+                android:text="Comida"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6sp"
+                    android:layout_weight="1"
+                    android:background="#8FFDCD"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtGramaCarne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textAlignment="center"
+                        android:textColor="#009662"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCarne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Carne"
+                        android:textAlignment="center"
+                        android:textColor="#009662"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtGramaExCarne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="5sp"
+                        android:text="0g Extra"
+                        android:textAlignment="center"
+                        android:textColor="#006632"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3sp"
+                    android:layout_marginRight="3sp"
+                    android:layout_weight="1"
+                    android:background="#8FFDCD"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtGramaAperitivos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0g"
+                        android:textAlignment="center"
+                        android:textColor="#009662"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtAperitivos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aperitivos"
+                        android:textAlignment="center"
+                        android:textColor="#009662"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtGramaExAperitivos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="5sp"
+                        android:text="0g Extra"
+                        android:textAlignment="center"
+                        android:textColor="#006632"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout2_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6sp"
+                    android:layout_weight="1"
+                    android:background="#009662"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtGramaTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_weight="1"
+                        android:text="0g"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtTotalComida"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtBebida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="5sp"
+                android:text="Bebida"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout3_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6sp"
+                    android:layout_weight="1"
+                    android:background="#D5BEFF"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtLitroCerveja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0L"
+                        android:textAlignment="center"
+                        android:textColor="#4A5ECC"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCerveja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cerveja"
+                        android:textAlignment="center"
+                        android:textColor="#4A5ECC"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtLitroExCerveja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="5sp"
+                        android:text="0ml Extra"
+                        android:textAlignment="center"
+                        android:textColor="#34428E"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3sp"
+                    android:layout_marginRight="3sp"
+                    android:layout_weight="1"
+                    android:background="#D5BEFF"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtLitroAgua"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0L"
+                        android:textAlignment="center"
+                        android:textColor="#4A5ECC"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtAgua"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Água"
+                        android:textAlignment="center"
+                        android:textColor="#4A5ECC"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtLitroExAgua"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="5sp"
+                        android:text="0ml Extra"
+                        android:textAlignment="center"
+                        android:textColor="#34428E"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout3_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6sp"
+                    android:layout_weight="1"
+                    android:background="#D5BEFF"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtLitroRefrigerante"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0,0L"
+                        android:textAlignment="center"
+                        android:textColor="#4A5ECC"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRefrigerante"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Refrigerante"
+                        android:textAlignment="center"
+                        android:textColor="#4A5ECC"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtLitroExRefrigerante"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="5sp"
+                        android:text="0ml Extra"
+                        android:textAlignment="center"
+                        android:textColor="#34428E"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtLitroTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4A5ECC"
+                android:text="0,0 Litros"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTotalBebida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4A5ECC"
+                android:text="Total"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="90sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginRight="90sp"
+                android:layout_marginBottom="10sp"
+                android:layout_weight="1"
+                android:text="Limpar"
+                android:textColorLink="#FF0000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
